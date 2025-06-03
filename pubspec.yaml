@@ -1,0 +1,23 @@
+name: devkit
+description: Um novo projeto Flutter.
+
+publish_to: "none" # Define que este projeto não será publicado no pub.dev.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  url_launcher: ^6.1.7 # Pacote para abrir links
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
