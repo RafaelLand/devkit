@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MaterialButtonsExample extends StatefulWidget {
   const MaterialButtonsExample({super.key});
@@ -25,7 +26,7 @@ class _MaterialButtonsExampleState extends State<MaterialButtonsExample> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Variações de Botão Material",
+          "Exemplo de Botão Material",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
@@ -40,7 +41,10 @@ class _MaterialButtonsExampleState extends State<MaterialButtonsExample> {
         actions: [
           IconButton(
             icon: const Icon(Icons.link, color: Colors.blue),
-            onPressed: () {},
+            onPressed: () {
+              launchUrl(Uri.parse(
+                  "https://github.com/RafaelLand/devkit/blob/main/lib/Material/Buttons.dart"));
+            },
           ),
         ],
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),

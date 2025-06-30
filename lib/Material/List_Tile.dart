@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const MaterialListTileExample());
 
@@ -16,14 +17,15 @@ class MaterialListTileExample extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: const Text(
-          'Material ListTile',
+          'Exemplo ListTile Material',
           style: TextStyle(color: Colors.blue),
         ),
         actions: [
           IconButton(
             icon: const Icon(Icons.link, color: Colors.blue),
             onPressed: () {
-              // Adicione aqui a ação desejada para o ícone de link
+              launchUrl(Uri.parse(
+                  "https://github.com/RafaelLand/devkit/blob/main/lib/Material/List_Tile.dart"));
             },
           ),
         ],

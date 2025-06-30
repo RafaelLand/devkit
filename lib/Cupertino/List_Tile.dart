@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const CupertinoListTileApp());
@@ -110,7 +111,8 @@ class CupertinoListTileExample extends StatelessWidget {
         trailing: CupertinoButton(
           padding: EdgeInsets.zero,
           onPressed: () {
-            // ação para anexar link
+            launchUrl(Uri.parse(
+                "https://github.com/RafaelLand/devkit/blob/main/lib/Cupertino/List_Tile.dart"));
           },
           child: const Icon(
             CupertinoIcons.link,

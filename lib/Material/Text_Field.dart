@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:devkit/Material/lista_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const MaterialTextFieldExample());
 
@@ -93,7 +94,7 @@ class _MaterialTextFieldScreenState extends State<MaterialTextFieldScreen> {
         foregroundColor: Colors.blue,
         elevation: 0,
         title: const Text(
-          "Variações de Botão Material",
+          "Exemplo de TextField Material",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
@@ -115,7 +116,8 @@ class _MaterialTextFieldScreenState extends State<MaterialTextFieldScreen> {
           IconButton(
             icon: const Icon(Icons.link),
             onPressed: () {
-              // Adicione aqui a ação de anexar link
+              launchUrl(Uri.parse(
+                  "https://github.com/RafaelLand/devkit/blob/main/lib/Material/Text_Field.dart"));
             },
           ),
         ],

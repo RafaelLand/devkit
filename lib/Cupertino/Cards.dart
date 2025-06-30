@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:devkit/Cupertino/lista_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const CupertinoCardExample());
 
@@ -34,7 +35,7 @@ class VariedCardScreenWithNavIcons extends StatelessWidget {
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       title: const Text(
-        "Variações de Cards Material",
+        "Exemplo de Cards Cupertino",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 18,
@@ -56,7 +57,8 @@ class VariedCardScreenWithNavIcons extends StatelessWidget {
         IconButton(
           icon: const Icon(Icons.link),
           onPressed: () {
-            // Ação de anexar link
+            launchUrl(Uri.parse(
+                "https://github.com/RafaelLand/devkit/blob/main/lib/Cupertino/Cards.dart"));
           },
         ),
       ],

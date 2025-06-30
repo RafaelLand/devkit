@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const MaterialSliderExample());
 
@@ -10,7 +11,7 @@ class MaterialSliderExample extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Variações de Botão Material",
+          "Exemplo de Slider Material",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
@@ -26,7 +27,8 @@ class MaterialSliderExample extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.link, color: Colors.blue),
             onPressed: () {
-              // Ação de anexar link
+              launchUrl(Uri.parse(
+                  "https://github.com/RafaelLand/devkit/blob/main/lib/Material/Slider.dart"));
             },
           ),
         ],

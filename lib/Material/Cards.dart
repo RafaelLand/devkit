@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:devkit/Material/lista_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(const MaterialCardExample());
 
@@ -25,7 +26,7 @@ class MaterialCardScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Variações de Cards Material",
+          "Exemplo de Cards Material",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
@@ -47,7 +48,8 @@ class MaterialCardScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.link),
             onPressed: () {
-              // Adicione aqui a ação de anexar link
+              launchUrl(Uri.parse(
+                  "https://github.com/RafaelLand/devkit/blob/main/lib/Material/Cards.dart"));
             },
           ),
         ],

@@ -1,4 +1,3 @@
-import 'package:devkit/Login_Cadastro/tela_cadastro.dart';
 import 'package:flutter/material.dart';
 import 'package:devkit/listaTelaInicial.dart';
 import 'package:devkit/Login_Cadastro/tela_login.dart';

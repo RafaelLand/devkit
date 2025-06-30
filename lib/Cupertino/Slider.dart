@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:devkit/Cupertino/lista_widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const CupertinoSliderExample());
@@ -36,7 +37,7 @@ class _CupertinoSliderExampleScreenState
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Variações de Cards Material",
+          "Exemplo de Cards Material",
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 18,
@@ -58,7 +59,8 @@ class _CupertinoSliderExampleScreenState
           IconButton(
             icon: const Icon(Icons.link),
             onPressed: () {
-              // Adicione aqui a ação de anexar link
+              launchUrl(Uri.parse(
+                  "https://github.com/RafaelLand/devkit/blob/main/lib/Cupertino/Slider.dart"));
             },
           ),
         ],
